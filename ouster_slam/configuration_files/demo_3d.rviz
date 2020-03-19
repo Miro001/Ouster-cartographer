@@ -40,7 +40,7 @@ Visualization Manager:
       Cell Size: 1
       Class: rviz/Grid
       Color: 160; 160; 164
-      Enabled: true
+      Enabled: false
       Line Style:
         Line Width: 0.029999999329447746
         Value: Lines
@@ -53,7 +53,7 @@ Visualization Manager:
       Plane: XY
       Plane Cell Count: 100
       Reference Frame: <Fixed Frame>
-      Value: true
+      Value: false
     - Class: rviz/TF
       Enabled: true
       Frame Timeout: 15
@@ -125,14 +125,14 @@ Visualization Manager:
       Enabled: true
       Fade-out distance: 1
       High Resolution: true
-      Low Resolution: false
+      Low Resolution: true
       Name: Submaps
       Submap query service: /submap_query
       Submaps:
         All: true
         Trajectory 0:
-          0.285: true
-          1.125: true
+          0.241: true
+          1.81: true
           Value: true
       Topic: /submap_list
       Tracking frame: base_link
@@ -221,7 +221,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/ThirdPersonFollower
-      Distance: 7.5094404220581055
+      Distance: 349.25146484375
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -236,31 +236,11 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.08539849519729614
+      Pitch: 0.5053990483283997
       Target Frame: <Fixed Frame>
       Value: ThirdPersonFollower (rviz)
-      Yaw: 2.1723122596740723
-    Saved:
-      - Class: rviz/ThirdPersonFollower
-        Distance: 9.300440788269043
-        Enable Stereo Rendering:
-          Stereo Eye Separation: 0.05999999865889549
-          Stereo Focal Distance: 1
-          Swap Stereo Eyes: false
-          Value: false
-        Focal Point:
-          X: 0
-          Y: 0
-          Z: 0
-        Focal Shape Fixed Size: true
-        Focal Shape Size: 0.05000000074505806
-        Invert Z Axis: false
-        Name: ThirdPersonFollower
-        Near Clip Distance: 0.009999999776482582
-        Pitch: 0.07039866596460342
-        Target Frame: <Fixed Frame>
-        Value: ThirdPersonFollower (rviz)
-        Yaw: 1.6253974437713623
+      Yaw: 4.000474452972412
+    Saved: ~
 Window Geometry:
   "&Displays":
     collapsed: false
@@ -277,5 +257,5 @@ Window Geometry:
   Tool Properties:
     collapsed: false
   Width: 1272
-  X: 598
+  X: 590
   Y: 0
