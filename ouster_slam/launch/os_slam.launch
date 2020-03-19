@@ -12,6 +12,8 @@
   <arg name="image" default="false" doc="publish range/intensity/noise image topic"/>
   <arg name="arg bag_filename" default="false" doc="bag for usage "/>
 
+  <arg name="arg carto_conf" default="" doc="FilePath to your cartograppher configuration"/>
+
   <node pkg="ouster_ros" name="os1_node" type="os1_node" output="screen" required="true">
     <param name="~/lidar_mode" type="string" value="$(arg lidar_mode)"/>
     <param name="~/replay" value="$(arg replay)"/>
@@ -34,15 +36,15 @@
 
 
   <param name="robot_description"
-         textfile="/home/miro/Documents/ros/oslam_ws/src/ouster_slam/urdf/os_sensor.urdf"/>
+         textfile="$(arg carto_conf)/urdf/os_sensor.urdf"/>
 
   <node name="robot_state_publisher" pkg="robot_state_publisher"
         type="robot_state_publisher" />
 
   <node name="cartographer_node" pkg="cartographer_ros"
         type="cartographer_node" args="
-          -configuration_directory /home/miro/Documents/ros/oslam_ws/src/ouster_slam/configuration_files
-          -configuration_basename my_robot.lua"
+          -configuration_directory $(arg carto_conf)/configuration_files
+          -configuration_basename os1_16.lua"
         output="screen">
 
   </node>
@@ -51,7 +53,7 @@
         type="cartographer_occupancy_grid_node" args="-resolution 0.05" />
 
   <node name="rviz" pkg="rviz" type="rviz" required="true"
-        args="-d /home/miro/Documents/ros/oslam_ws/src/ouster_slam/configuration_files/demo_2d.rviz" />
+        args="-d $(arg carto_conf)/configuration_files/demo_3d.rviz" />
 
   <node name="playbag" pkg="rosbag" type="play"
         args="--clock $(arg bag_filename)" />
