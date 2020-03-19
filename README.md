@@ -1,7 +1,7 @@
 # SLAM with Ouster lidar and Cartographer
 
 
-This repository contains package, that integrates Ouster lidar (https://ouster.com/) with Cartographer (https://google-cartographer-ros.readthedocs.io/en/latest/) for realtime and 
+This repository contains package, that integrates Ouster lidar (https://ouster.com/) with Cartographer (https://google-cartographer-ros.readthedocs.io/en/latest/) for realtime and
 offline/online SLAM. This repository is mainly to speed up the your process of getting into calibration of Cartographer for Ouster lidar.
 ## Installation
 
@@ -12,28 +12,28 @@ Further steps:
     * sudo apt install ros-melodic-cartographer-ros
     * sudo apt install ros-melodic-cartographer-ros-msgs
     * sudo apt install ros-melodic-cartographer-rviz
-2. Create a workspace directory 
+2. Create a workspace directory
     * source /opt/ros/melodic/setup.bash -> your path to ROS
     * mkdir -p oslam_ws/src  
     * cd oslam_ws
     * git clone git@github.com:Miro001/Ouster-cartographer.git src
     * cd src  
     * git submodule update --init --recursive
-    * cd .. 
-    * catkin_make 
+    * cd ..
+    * catkin_make
 3. Launch ouster package and cartographer in a package.
     * source devel/setup.bash -> source current enviroment
-    
-    * roslaunch ouster_slam os_slam.launch \
-                             udp_hostname:=127.0.0.1 \
-                             replay:=true \
-                             bag_filename:=${BAGPATH}\
-                             metadata:=${CONFIGPATH}\
+
+    * roslaunch ouster_slam os_slam.launch *\*\
+                             udp_hostname:=127.0.0.1 *\*\
+                             replay:=true *\*\
+                             bag_filename:=${BAGPATH}*\*\
+                             metadata:=${CONFIGPATH}*\*\
                              carto_conf:=${CARTOCONF}
-    
+
 ## Additional info
 * The whole thign required just minor tweeking of ouster_example + remap in the launch file
-* If you have solid PC, try tune OS1_64 
+* If you have solid PC, try tune OS1_64
 
 ## Contribution
 
