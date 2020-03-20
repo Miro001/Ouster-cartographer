@@ -21,7 +21,7 @@ Further steps are run in the console:
     * git submodule update --init --recursive
     * cd ..
     * catkin_make
-3. Launch ouster package and cartographer in a package.
+3. Launch ouster package and cartographer in a package. (check [slam_launch.sh](./slam_launch.sh))
     * source devel/setup.bash -> source current enviroment
     * Here is the magic! You just have to setup three paths
       * BAGPATH = is the path to example bagfile (or your own *.bag)
